@@ -12,7 +12,7 @@ public class DivOperator extends BinaryOperator {
         if (leftVal == null) {
             return rightVal.evaluate();
         }
-        if (rightVal.evaluate() == 0) throw new Exception("Divide by 0");
+        if (rightVal.evaluate() == 0) throw new DivideByZeroException();
         return leftVal.evaluate() / rightVal.evaluate();
     }
 }
